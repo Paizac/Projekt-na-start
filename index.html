@@ -5,46 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My training page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <h1>Welcome to My Training Page</h1>
-    <p>This is a simple HTML page for training purposes.</p>
+    <header>
+        <h1>Welcome to My Training Page</h1>
+    </header>
+    <nav id="#menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main id="#main">
+        <p>This is a simple HTML page for training purposes.</p>
 
-    <h2>This is a heading</h2>
-    <p>In this paragraph i will <strong> some text</strong> about my training and my <em>goal to become</em> a web developer</p>
-    <!-- Rozbudować to -->
-    <h2>My passion</h2>
-    <p>My passion is to become a web developer</p>
+        <h2>This is a heading</h2>
+        <p>In this paragraph i will <strong> some text</strong> about my training and my <em>goal to become</em> a web developer</p>
+        <!-- Rozbudować to -->
+        <h2>My passion</h2>
+        <p>My passion is to become a web developer</p>
 
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ul>
-    <a href="https://www.example.com" target="_blank">Visit Example.com</a>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <a href="https://www.example.com" target="_blank">Visit Example.com</a>
 
-    <ol>
-        <li>Learn the basics</li>
-        <li>Build projects</li>
-        <li>Practice regularly</li>
-    </ol>
+        <ol>
+            <li>Learn the basics</li>
+            <li>Build projects</li>
+            <li>Practice regularly</li>
+        </ol>
 
 
-    <img src="./images/G2_Esports_-_logo.jpg" alt="G2 Esports logo featuring a stylized samurai mask with bold black and white lines, red accents, and the letters G2 in the center, set against a plain background, conveying a competitive and energetic atmosphere">
+        <img src="./images/G2_Esports_-_logo.jpg" alt="G2 Esports logo featuring a stylized samurai mask with bold black and white lines, red accents, and the letters G2 in the center, set against a plain background, conveying a competitive and energetic atmosphere">
 
-    <table>
-        <tr>
-            <th>Language</th>
-            <th>Proficiency</th>
-        </tr>
-        <tr>
-            <td>HTML</td>
-            <td>Intermediate</td>
-        </tr>
-    </table>
+        <table>
+            <tr>
+                <th>Language</th>
+                <th>Proficiency</th>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td>Intermediate</td>
+            </tr>
+        </table>
+
+        <form>
+            <label for="name">Your name:</label>
+            <input type="text" id="name" name="name" required>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Your message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <input type="submit" value="Submit">
+
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Training Page. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
