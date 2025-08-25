@@ -5,9 +5,13 @@
 }
 
 body {
-    line-height: normal;
+    line-height: 1.6;
+    /* zamiast normal -> bardziej czytelny tekst */
     font-family: "Raleway", sans-serif;
 }
+
+
+/* ---------------- H1 ---------------- */
 
 h1 {
     color: #5E0F24;
@@ -16,38 +20,52 @@ h1 {
     text-align: center;
     letter-spacing: 1px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    transition: #5E0F24 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+    /* poprawione -> wcześniej miałeś transition na kolor, ale bez właściwości */
 }
+
+
+/* ---------------- Link aktywny ---------------- */
 
 .active {
     color: #a4193d;
     text-decoration: none;
     display: flex;
-    hover {
-        color: #5E0F24;
-        transition: #5E0F24 0.3s ease-in-out;
-    }
+    transition: color 0.3s ease-in-out;
+    /* tu dałem od razu transition */
 }
+
+.active:hover {
+    color: #5E0F24;
+    /* zmienia kolor przy hover */
+}
+
+
+/* ---------------- Kategorie w menu ---------------- */
 
 .category {
     display: grid;
-    margin-right: 20px;
     width: fit-content;
-    height: fit-content;
     padding: 20px;
     margin: 10px;
     background-color: #FFDFB9;
     border-radius: 10px;
-    position: relative;
     border: #2E2E2E 2px solid;
-    align-items: center;
     place-items: center;
-    transform: translateY(-2px);
-    hover {
-        background-color: #a4193d;
-        transition: #a4193d 0.3s ease-in-out;
-    }
+    transition: all 0.3s ease-in-out;
+    /* efekt płynny dla kilku właściwości */
 }
+
+.category:hover {
+    background-color: #a4193d;
+    color: #FFDFB9;
+    /* zmiana koloru tekstu przy hover */
+    transform: translateY(-2px);
+    /* unosi kafelek do góry */
+}
+
+
+/* ---------------- Header ---------------- */
 
 #header {
     background-color: #FFDFB9;
@@ -56,101 +74,138 @@ h1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     background-image: linear-gradient(to bottom, #a4193d, #FFDFB9);
+    top: 0;
 }
+
+
+/* ---------------- Menu ---------------- */
 
 #menu {
     background-color: #a4193d;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: auto;
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
+
+
+/* ---------------- Main ---------------- */
 
 #main {
     background-color: #FFDFB9;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    line-height: normal;
-    max-width: fit-content;
-    margin: auto;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    max-width: 800px;
+    margin: 20px auto;
 }
+
+
+/* ---------------- Paragrafy ---------------- */
 
 p {
     color: #2E2E2E;
     font-family: 'American Typewriter', serif;
     font-size: 18px;
     text-align: justify;
-    first-letter {
-        font-size: 24px;
-        font-weight: bold;
-    }
+    line-height: 1.6;
+    /* lepsza czytelność */
 }
+
+p::first-letter {
+    font-size: 24px;
+    /* pierwsza litera większa */
+    font-weight: bold;
+    color: #5E0F24;
+}
+
+
+/* ---------------- Stopka ---------------- */
 
 footer {
     background-color: #a4193d;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+    color: #FFDFB9;
+    /* jaśniejszy tekst w stopce */
 }
+
+
+/* ---------------- Obrazki ---------------- */
 
 img {
     border-radius: 5px;
-    hover {
-        transform: scale(1.1);
-        transition: transform 0.3s ease-in-out;
-    }
+    transition: transform 0.3s ease-in-out;
+    /* przeniesione tutaj */
 }
+
+img:hover {
+    transform: scale(1.1);
+    /* powiększenie */
+}
+
+
+/* ---------------- Tabele ---------------- */
 
 table {
     border-collapse: collapse;
-    th,
-    td {
-        padding: 8px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
-    th {
-        background-color: #a4193d;
-        color: #FFDFB9;
-    }
+    width: 100%;
+    /* tabela na całą szerokość */
 }
+
+table th,
+table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #a4193d;
+    color: #FFDFB9;
+}
+
+
+/* ---------------- Formularz ---------------- */
 
 form {
     display: flex;
     flex-direction: column;
     max-width: 400px;
-    margin: 0 auto;
-    label {
-        margin-bottom: 10px;
-    }
-    input[type="text"],
-    input[type="email"],
-    textarea {
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-    }
-    input[type="submit"] {
-        background-color: #a4193d;
-        color: #FFDFB9;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease-in-out;
-        hover {
-            background-color: #5E0F24;
-        }
-    }
+    margin: 20px auto;
+    gap: 10px;
+    /* odstęp zamiast marginesów */
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    background-color: #a4193d;
+    color: #FFDFB9;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+    background-color: #5E0F24;
+    /* ciemniejszy przy hover */
 }
