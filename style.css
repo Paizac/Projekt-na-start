@@ -4,18 +4,29 @@
     box-sizing: border-box;
 }
 
+body {
+    line-height: normal;
+    font-family: "Raleway", sans-serif;
+}
+
 h1 {
     color: #5E0F24;
-    font-family: 'American Typewriter', serif;
+    font-family: 'Raleway', serif;
     font-size: 48px;
     text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: #5E0F24 0.3s ease-in-out;
 }
 
 .active {
     color: #a4193d;
-    border-radius: 5px;
     text-decoration: none;
     display: flex;
+    hover {
+        color: #5E0F24;
+        transition: #5E0F24 0.3s ease-in-out;
+    }
 }
 
 .category {
@@ -31,6 +42,11 @@ h1 {
     border: #2E2E2E 2px solid;
     align-items: center;
     place-items: center;
+    transform: translateY(-2px);
+    hover {
+        background-color: #a4193d;
+        transition: #a4193d 0.3s ease-in-out;
+    }
 }
 
 #header {
@@ -38,15 +54,19 @@ h1 {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    background-image: linear-gradient(to bottom, #a4193d, #FFDFB9);
 }
 
 #menu {
     background-color: #a4193d;
     padding: 20px;
-    border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: auto;
     display: block;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 #main {
@@ -54,6 +74,13 @@ h1 {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: normal;
+    max-width: fit-content;
+    margin: auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 p {
@@ -61,11 +88,15 @@ p {
     font-family: 'American Typewriter', serif;
     font-size: 18px;
     text-align: justify;
+    first-letter {
+        font-size: 24px;
+        font-weight: bold;
+    }
 }
 
 footer {
     background-color: #a4193d;
     padding: 20px;
-    border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
